@@ -5,5 +5,5 @@ WORKDIR /libsais
 
 RUN CC="clang" CXX="clang++" CFLAGS="-fsanitize=fuzzer-no-link,signed-integer-overflow" cmake . && make && cd fuzz && make
 
-# FROM debian:bookworm
-# COPY --from=build /libsais/fuzz .
+FROM debian:bookworm
+COPY --from=build /libsais/fuzz .

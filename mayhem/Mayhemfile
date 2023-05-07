@@ -1,0 +1,6 @@
+project: libsais
+target: sais-fuzz
+
+cmds:
+    - cmd: ./sais-fuzz
+      libfuzzer: true

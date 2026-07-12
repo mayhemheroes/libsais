@@ -1,0 +1,10 @@
+project: mayhemheroes/libsais
+target: sais-fuzz
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/sais-fuzz/testsuite
+
+cmds:
+  - cmd: /mayhem/sais-fuzz
+    libfuzzer: true
